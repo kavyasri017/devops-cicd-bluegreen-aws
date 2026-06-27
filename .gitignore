@@ -1,0 +1,16 @@
+# Build files
+target/
+
+# Java
+*.class
+*.jar
+
+# IDE files
+.idea/
+.vscode/
+
+# Log files
+*.log
+
+# Environment files
+.env
