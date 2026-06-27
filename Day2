@@ -1,0 +1,75 @@
+# Day 2 - Project Notes
+
+**Date:** 27 June 2026
+
+## Objective
+
+Set up the Spring Boot application and prepare it for containerization.
+
+## Tasks Completed
+
+* Added the Spring Boot project to the `app` directory.
+* Configured the Git repository and pushed the latest changes to GitHub.
+* Installed Java 17 on the Git server.
+* Resolved the `JAVA_HOME` issue.
+* Successfully built the application using the Maven Wrapper (`./mvnw clean package`).
+* Created the `controller` package.
+* Added `HomeController` with REST API endpoints.
+* Updated project documentation and learning notes.
+
+## Issues Faced
+
+### Issue 1: JAVA_HOME not configured
+
+**Error:**
+
+* `The JAVA_HOME environment variable is not defined correctly.`
+
+**Cause:**
+
+* Java was not installed on the Git server.
+
+**Resolution:**
+
+* Installed OpenJDK 17.
+* Verified with `java -version`.
+* Rebuilt the project successfully.
+
+---
+
+### Issue 2: Jenkins installation failed
+
+**Error:**
+
+* Jenkins APT repository was not compatible with Ubuntu 26.04.
+
+**Resolution:**
+
+* Decided to use the official Jenkins Docker image instead of installing Jenkins through APT.
+
+## Commands Learned
+
+```bash
+java -version
+chmod +x mvnw
+./mvnw clean package
+git add .
+git commit -m "Add Spring Boot application"
+git push
+```
+
+## Key Learnings
+
+* Spring Boot applications are built using Maven.
+* The Maven Wrapper (`mvnw`) ensures a consistent Maven version.
+* Java must be installed and configured before building the project.
+* Containerizing Jenkins is a practical solution when package repositories are not compatible.
+
+## Next Plan (Day 3)
+
+* Correct the project folder structure if required.
+* Create the Dockerfile.
+* Build the Docker image.
+* Run the application in a Docker container.
+* Verify the application through the browser.
+* Start Jenkins pipeline integration.
